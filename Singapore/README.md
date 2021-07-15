@@ -362,6 +362,8 @@ You can view this report by navigating in Windows explorer to the Reports folder
 * [GUIDE: Rubrik PowerShell - Quick Start Guide](https://github.com/rubrikinc/rubrik-sdk-for-powershell/blob/devel/docs/quick-start.md)
 * [VIDEO: Getting Started with the Rubrik SDK for PowerShell](https://www.youtube.com/watch?v=tY6nQLNYRSE)
 * [BLOG: Get-Started with the Rubrik PowerShell Module](https://www.rubrik.com/blog/get-started-rubrik-powershell-module/)
-* [BLOG: Using Automation to Validate Applications and Services in Rubrik Backups](https://www.rubrik.com/blog/automation-to-validate-in-rubrik-backups/)* [Rubrik CDM API * Documentation](https://github.com/rubrikinc/api-documentation)
-* [GitHub - AsBuiltReport - RubrikCDM](https://github.com/AsBuiltReport/AsBuiltReport.Rubrik.CDM)
+* [BLOG: Using Automation to Validate Applications and Services in Rubrik Backups](https://www.rubrik.com/blog/automation-to-validate-in-rubrik-backups/)
+
 * [BLOG: Rubrik AsBuiltReport](https://www.rubrik.com/blog/products-solutions/20/4/rubrik-as-built-report-for-easier-automated-documentation)
+* [GitHub - AsBuiltReport - RubrikCDM](https://github.com/AsBuiltReport/AsBuiltReport.Rubrik.CDM)
+* [DOCS: Rubrik CDM API](https://github.com/rubrikinc/api-documentation)
