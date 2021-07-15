@@ -110,7 +110,7 @@ If you need to install PowerShell in production environments or for home use I w
 1. Run `Get-ExecutionPolicy` to validate Execution policy is set to RemoteSigned or Bypass.
     1. If not set correctly Run `Set-ExecutionPolicy` using the parameter RemoteSigned or Bypass.
 1. Run `Get-Module -ListAvailable *Rubrik*` to validate that the correct modules are installed.
-    1. Run `Install-Module -Name Rubrik -Scope CurrentUser` to download the module from the PowerShell Gallery. Note that the first time you install from the remote repository it may ask you to first trust the repository.
+    1. Run `Install-Module -Name Rubrik -Scope CurrentUser -Force` to download the module from the PowerShell Gallery. Note that the first time you install from the remote repository it may ask you to first trust the repository.
     1. Run `Install-Module -Name AsBuiltReport.Rubrik.CDM -Scope CurrentUser` to download the module from the PowerShell Gallery.
 
 ### Connecting to the Rubrik Cluster
@@ -140,7 +140,7 @@ $Credential = Get-Credential
 PowerShell will prompt for the UserName and Password and the credentials will be securely stored in the `$Credential` variable. This variable can now be used to authenticate against the Rubrik Cluster in by running the following code:
 
 ``` PowerShell
-Connect-Rubrik -Server yourip -Credential $Credential
+Connect-Rubrik -Server 10.0.2.10 -Credential $Credential
 ```
 ### Commands and Help
 
@@ -351,7 +351,7 @@ The table below outlines the default and maximum **InfoLevel** settings for each
    ```powershell
    New-Item C:\Reports -Type Directory
    $Creds = Get-Credential -Message 'Please enter the lab Rubrik CDM credentials'
-   New-AsBuiltReport -Target 'cluster1.domain.local' -Credential $Creds -Report Rubrik.CDM -Format Html,Text -OutputFolderPath 'C:\Reports'
+   New-AsBuiltReport -Target 10.0.2.10 -Credential $Creds -Report Rubrik.CDM -Format Html,Text -OutputFolderPath 'C:\Reports'
    ```
 
 You can view this report by navigating in Windows explorer to the Reports folder and clicking the HTML report once the action is complete.
