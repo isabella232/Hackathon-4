@@ -2,10 +2,10 @@
 
 This lab guide consists of 4 separate separate sections:
 
-1. [Live Mount a database](https://github.com/rubrikinc/CampRubrikHackathon#live-mount-a-database)
-1. [Getting started with PowerShell ](https://github.com/rubrikinc/CampRubrikHackathon#getting-started-with-powershell)
-1. [Generate an asBuilt Rubrik cluster report](https://github.com/rubrikinc/CampRubrikHackathon#generate-an-asbuilt-rubrik-cluster-report)
-1. [Links and references](Links and references)
+1. [Live Mount a database](https://github.com/rubrikinc/Hackathon/tree/main/Singapore#live-mount-a-database)
+1. [Getting started with PowerShell ](https://github.com/rubrikinc/Hackathon/tree/main/Singapore#live-mount-a-database#getting-started-with-powershell)
+1. [Generate an asBuilt Rubrik cluster report](https://github.com/rubrikinc/Hackathon/tree/main/Singapore#live-mount-a-database#generate-an-asbuilt-rubrik-cluster-report)
+1. [Links and references](https://github.com/rubrikinc/Hackathon/tree/main/Singapore#links-and-references)
 
 ## Live Mount a database
 
@@ -30,17 +30,17 @@ The API Playground is an implementation of the open source Swagger UI which allo
 
 Use your Rubrik cluster credentials to authorize. Use basic authorization for this exercise.
 
-![alt text](https://github.com/rubrikinc/CampRubrikHackathon/blob/main/images/Authenticate1.png)
+![alt text](https://github.com/rubrikinc/Hackathon/blob/main/Singapore/images/Authenticate1.png)
 
-![alt text](https://github.com/rubrikinc/CampRubrikHackathon/blob/main/images/Authenticate2.png)
+![alt text](https://github.com/rubrikinc/Hackathon/blob/main/Singapore/images/Authenticate2.png)
 
 ### Step 3 - Find SQL Server instance id
 
 Use ``` GET /mssql/instance```
 
-![alt text](https://github.com/rubrikinc/CampRubrikHackathon/blob/main/images/getinstance-id.png)
+![alt text](https://github.com/rubrikinc/Hackathon/blob/main/Singapore/images/getinstance-id.png)
 
-![](https://github.com/rubrikinc/CampRubrikHackathon/blob/main/images/GetInstance2.png)
+![](https://github.com/rubrikinc/Hackathon/blob/main/Singapore/images/GetInstance2.png)
 
 
 ### Step 4 - Find SQL Server database id
@@ -49,9 +49,9 @@ Use ``` GET /mssql/db```
 
 Pass the SQL Server instance id fetched in Step 3 as a value for "**instance_id**" parameter
 
-![](https://github.com/rubrikinc/CampRubrikHackathon/blob/main/images/Get%20DB%20Information.png)
+![](https://github.com/rubrikinc/Hackathon/blob/main/Singapore/images/Get%20DB%20Information.png)
 
-![](https://github.com/rubrikinc/CampRubrikHackathon/blob/main/images/Get%20DB%20Information2.png)
+![](https://github.com/rubrikinc/Hackathon/blob/main/Singapore/images/Get%20DB%20Information2.png)
 
 ### Step 5 - Live mount a snapshot on a target host
 
@@ -76,9 +76,9 @@ Modify the sample config object to your environment.
 
 From the response body note the request id.
 
-![](https://github.com/rubrikinc/CampRubrikHackathon/blob/main/images/LM1.png)
+![](https://github.com/rubrikinc/Hackathon/blob/main/Singapore/images/LM1.png)
 
-![](https://github.com/rubrikinc/CampRubrikHackathon/blob/main/images/LM2.png)
+![](https://github.com/rubrikinc/Hackathon/blob/main/Singapore/images/LM2.png)
 
 
 ### Step 6 - Find the status of the async request
@@ -87,15 +87,15 @@ Use ``` GET /mssql/request/{id} ```
 
 Pass the request id of the async job fetched in Step 5 as a value for "**id**" parameter
 
-![](https://github.com/rubrikinc/CampRubrikHackathon/blob/main/images/request1.png)
-![](https://github.com/rubrikinc/CampRubrikHackathon/blob/main/images/request2.png)
+![](https://github.com/rubrikinc/Hackathon/blob/main/Singapore/images/request1.png)
+![](https://github.com/rubrikinc/Hackathon/blob/main/Singapore/images/request2.png)
 
 
 ### Step 7 - Check the Live Mount database in SQL Server Management Studio
 
 Switch to SQL Server Management Studio on your Windows host to view the Live Mounted Database.
 
-![](https://github.com/rubrikinc/CampRubrikHackathon/blob/main/images/SSMS.png)
+![](https://github.com/rubrikinc/Hackathon/blob/main/Singapore/images/SSMS.png)
 
 ## Getting started with PowerShell 
 
